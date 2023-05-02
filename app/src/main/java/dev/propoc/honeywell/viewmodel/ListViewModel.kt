@@ -24,4 +24,8 @@ class ListViewModel: ViewModel() {
         item?.image?.let { _itemsList.value?.get(position)?.image = it }
         item?.colorCoding?.let { _itemsList.value?.get(position)?.colorCoding = it }
     }
+
+    fun deleteItem(position: Int) {
+        _itemsList.value?.remove(_itemsList.value?.let { it[position] } )
+    }
 }

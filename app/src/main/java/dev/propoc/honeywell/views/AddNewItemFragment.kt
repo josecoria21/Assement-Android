@@ -2,6 +2,7 @@ package dev.propoc.honeywell.views
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.hardware.camera2.CameraManager
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -30,6 +31,12 @@ class AddNewItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentAddNewItemBinding.inflate(inflater, container, false)
+        val byteArray = arguments?.getByteArray("imageByteArray")
+
+        if (byteArray != null) {
+            val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+            binding.selectedImage.setImageBitmap(bitmap)
+        }
 
         binding.apply {
             selectImage.setOnClickListener {
@@ -42,6 +49,10 @@ class AddNewItemFragment : Fragment() {
                     colorSelected = color
                 }
             })
+
+            takePhoto.setOnClickListener {
+                findNavController().navigate(R.id.action_addNewItemFragment_to_permissionsFragment)
+            }
 
             actionButton.setOnClickListener {
                 val name = if (itemName.text.toString() != "") {

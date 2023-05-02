@@ -5,10 +5,12 @@
     <string name="new_item_name">Add Name</string>
     <string name="new_item_name_hint">Jose Coria</string>
     <string name="new_image">Select Image</string>
+    <string name="take_photo">Take Photo</string>
     <string name="new_color">Pick Color</string>
     <string name="add_new_item">Add New Item</string>
 
-
     <string name="update_item">Update Item</string>
+    <string name="delete_item">Delete Item</string>
 
+    <string name="capture_button_alt">Capture</string>
 </resources>

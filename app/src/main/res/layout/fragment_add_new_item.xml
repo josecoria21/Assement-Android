@@ -25,14 +25,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <Button
-                    android:id="@+id/select_image"
+                <TextView
+                    android:id="@+id/item_name_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/new_image"
+                    android:text="@string/new_item_name"
+                    app:layout_constraintBottom_toTopOf="@+id/item_name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/new_image" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/item_name"
@@ -44,6 +45,36 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/item_name_tv" />
 
+                <TextView
+                    android:id="@+id/new_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_image"
+                    app:layout_constraintBottom_toTopOf="@+id/take_photo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/item_name" />
+
+                <Button
+                    android:id="@+id/take_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/take_photo"
+                    app:layout_constraintBottom_toTopOf="@+id/select_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/new_image" />
+
+                <Button
+                    android:id="@+id/select_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/new_image"
+                    app:layout_constraintBottom_toTopOf="@+id/selected_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/take_photo" />
+
                 <ImageView
                     android:id="@+id/selected_image"
                     android:layout_width="600px"
@@ -51,24 +82,6 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/select_image" />
-
-                <TextView
-                    android:id="@+id/item_name_tv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/new_item_name"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/new_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/new_image"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/item_name" />
 
                 <TextView
                     android:id="@+id/new_color"
@@ -93,7 +106,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/colorPickerView"/>
+                    app:layout_constraintTop_toBottomOf="@+id/colorPickerView" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

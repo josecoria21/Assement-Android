@@ -28,6 +28,9 @@
         <action
             android:id="@+id/action_addNewItemFragment_to_listFragment"
             app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_addNewItemFragment_to_permissionsFragment"
+            app:destination="@id/permissionsFragment" />
     </fragment>
     <fragment
         android:id="@+id/editItemFragment"
@@ -40,5 +43,25 @@
         <action
             android:id="@+id/action_editItemFragment_to_listFragment"
             app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="dev.propoc.honeywell.views.CameraFragment"
+        android:label="CameraFragment"
+        app:popUpTo="@id/addNewItemFragment"
+        app:popUpToInclusive="true" >
+        <action
+            android:id="@+id/action_cameraFragment_to_addNewItemFragment"
+            app:destination="@id/addNewItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionsFragment"
+        android:name="dev.propoc.honeywell.views.PermissionsFragment"
+        android:label="PermissionsFragment"
+        app:popUpTo="@id/addNewItemFragment"
+        app:popUpToInclusive="true" >
+        <action
+            android:id="@+id/action_permissionsFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
     </fragment>
 </navigation>

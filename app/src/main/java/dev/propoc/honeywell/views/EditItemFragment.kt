@@ -60,6 +60,13 @@ class EditItemFragment : Fragment() {
                 Toast.makeText(context, "Item Modified", Toast.LENGTH_SHORT).show()
                 findNavController().navigate(R.id.action_editItemFragment_to_listFragment)
             }
+
+            deleteCta.setOnClickListener {
+                viewModel.deleteItem(position)
+
+                Toast.makeText(context, "Item Deleted", Toast.LENGTH_SHORT).show()
+                findNavController().navigate(R.id.action_editItemFragment_to_listFragment)
+            }
         }
 
         if (item != null) {

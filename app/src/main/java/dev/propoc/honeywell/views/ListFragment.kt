@@ -11,7 +11,6 @@ import androidx.navigation.fragment.findNavController
 import dev.propoc.honeywell.R
 import dev.propoc.honeywell.adapter.ItemAdapter
 import dev.propoc.honeywell.databinding.FragmentListBinding
-import dev.propoc.honeywell.model.Items
 import dev.propoc.honeywell.viewmodel.ListViewModel
 
 class ListFragment : Fragment(), ItemAdapter.ItemClickListener {
